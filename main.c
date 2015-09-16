@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include "funcs.h"
 #define FILES_ERROR 1;
-
+//working game of life but still not done because time limit.
 int main(int argc,char* argv[]) {
-	//IMPORTANT NULL INIT
 	//List of "list of 'Life'"
 	List* gameBoard = createList(&destroyList);
 	char temp;
@@ -18,7 +17,6 @@ int main(int argc,char* argv[]) {
 		return 1;
 	}
 	PrintBoard(gameBoard);
-	PrintBoardN(gameBoard);
 	printf("\n");
 	scanf("%c", &temp);
 	while (temp != '0') {

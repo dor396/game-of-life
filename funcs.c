@@ -191,21 +191,6 @@ extern void PrintBoard(List* gameBoard) {
 		printf("\n");
 	}
 }
-extern void PrintBoardN(List* gameBoard) {
-	Node* temp_Col = getListFirst(gameBoard);
-	Node* temp_Life;
-	int i, j;
-	for (i = 0; i < getListLength(gameBoard); i++) {
-		List* temp_List = (List*)getNodeData(temp_Col);
-		temp_Life = getListFirst(temp_List);
-		for (j = 0; j < getListLength(temp_List); j++) {
-			printf("%d", ((Life*)getNodeData(temp_Life))->neighbors);
-			temp_Life = getListNext(temp_Life);
-		}
-		temp_Col = getListNext(temp_Col);
-		printf("\n");
-	}
-}
 static int AddEmptyRow(List* gameBoard, int at) {
 	List* temp_List;
 	int row_Len = getListLength((List*)getNodeData(getListFirst(gameBoard)));
